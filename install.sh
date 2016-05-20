@@ -1,5 +1,8 @@
 #! /usr/bin/env bash
 
+echo "Cloning tpm..."
+git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm
+
 echo "Linking tmux config..."
 ln -s $(pwd)/tmux.conf $HOME/.tmux.conf
 
