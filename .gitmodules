@@ -1,0 +1,3 @@
+[submodule "vim/pack/jcfg/start/vim-solarized8"]
+	path = vim/pack/jcfg/start/vim-solarized8
+	url = https://github.com/lifepillar/vim-solarized8.git
