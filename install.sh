@@ -1,13 +1,16 @@
 #! /usr/bin/env bash
 
-echo "Cloning tpm..."
-git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm
+readonly DIRNAME="$(pwd)/$(dirname "$0")"
+# Removes any trailing . from running inside this dir
+readonly FULLDIR="$(sed "s/\.$//" <(echo -n $DIRNAME))"
 
 echo "Linking tmux config..."
-ln -s $(pwd)/tmux.conf $HOME/.tmux.conf
-
-echo "Cloning Vundle..."
-git clone https://github.com/VundleVim/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
+ln -i -s $FULLDIR/tmux/.tmux.conf $HOME/.tmux.conf
+cp $FULLDIR/tmux/.tmux.conf.local $HOME/
 
 echo "Linking vimrc config..."
-ln -s $(pwd)/vimrc $HOME/.vimrc
+ln -i -s $FULLDIR/vimrc $HOME/.vimrc
+
+echo "Linking vim config folder..."
+rm -r -i $HOME/.vim
+ln -i -s $FULLDIR/vim $HOME/.vim

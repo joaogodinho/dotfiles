@@ -18,6 +18,9 @@ set nomodeline
 " Should be the default already, but better to force
 set encoding=utf-8
 
+" Enable clipboard
+set clipboard=unnamed
+
 " Show cursor position info
 set ruler
 
