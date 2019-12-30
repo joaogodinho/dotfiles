@@ -2,10 +2,11 @@
 
 readonly DIRNAME="$(pwd)/$(dirname "$0")"
 # Removes any trailing . from running inside this dir
-readonly FULLDIR="$(sed "s/\.$//" <(echo -n $DIRNAME))"
+readonly FULLDIR="$(sed "s/\/\.$//" <(echo -n $DIRNAME))"
 
 echo "Linking tmux config..."
 ln -i -s $FULLDIR/tmux/.tmux.conf $HOME/.tmux.conf
+ln -i -s $FULLDIR/tmux.conf.local $HOME/.tmux.conf.local
 cp $FULLDIR/tmux/.tmux.conf.local $HOME/
 
 echo "Linking vimrc config..."
