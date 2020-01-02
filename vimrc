@@ -15,6 +15,11 @@ filetype plugin indent on
 " Disable parsing of header/footer for options
 set nomodeline
 
+" Show list of matching files when in command mode
+set wildmenu
+" Show list with longest match, then go full
+set wildmode=list:longest,full
+
 " Should be the default already, but better to force
 set encoding=utf-8
 
