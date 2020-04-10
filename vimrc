@@ -117,7 +117,5 @@ set listchars=tab:▸\ ,eol:¬,space:·,trail:·
 map <leader>l :set list!<CR>
 
 " Set color scheme
-let g:solarized_termcolors=256
-let g:solarized_termtrans=1
-set background=dark
-colorscheme solarized8
+let base16colorspace=256  " Access colors present in 256 colorspace
+colorscheme base16-default-dark
