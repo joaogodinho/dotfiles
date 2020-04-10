@@ -5,9 +5,7 @@ readonly DIRNAME="$(pwd)/$(dirname "$0")"
 readonly FULLDIR="$(sed "s/\/\.$//" <(echo -n $DIRNAME))"
 
 echo "Linking tmux config..."
-ln -i -s $FULLDIR/tmux/.tmux.conf $HOME/.tmux.conf
-ln -i -s $FULLDIR/tmux.conf.local $HOME/.tmux.conf.local
-cp $FULLDIR/tmux/.tmux.conf.local $HOME/
+ln -i -s $FULLDIR/tmux.conf $HOME/.tmux.conf
 
 echo "Linking vimrc config..."
 ln -i -s $FULLDIR/vimrc $HOME/.vimrc
@@ -15,3 +13,6 @@ ln -i -s $FULLDIR/vimrc $HOME/.vimrc
 echo "Linking vim config folder..."
 rm -r -i $HOME/.vim
 ln -i -s $FULLDIR/vim $HOME/.vim
+
+echo "Linking alacritty config..."
+ln -i -s $FULLDIR/alacritty.yml $HOME/.alacritty.yml
