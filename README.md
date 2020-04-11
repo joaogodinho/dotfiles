@@ -7,6 +7,7 @@
 - `fasd`: https://github.com/clvv/fasd
 - Prezto: https://github.com/sorin-ionescu/prezto
 - base16: https://github.com/chriskempson/base16
+- vim (with clipboard and X11 support: `vim-gtk` in Ubuntu)
 
 ## Prezto
 
@@ -62,3 +63,7 @@ alias zz='fasd_cd -d -i' # cd with interactive selection
 ## Alacritty configurations
 
 Using `base16-ocean-256.yml`
+
+## Vim Configurations
+
+If working with X11, use `set clipboard=unnamedplus`
