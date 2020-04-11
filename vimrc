@@ -25,6 +25,8 @@ set encoding=utf-8
 
 " Enable clipboard
 set clipboard=unnamed
+" X11 version
+"set clipboard=unnamedplus
 
 " Show cursor position info
 set ruler
