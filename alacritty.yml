@@ -40,3 +40,8 @@ colors:
     - { index: 19, color: '0x4f5b66' }
     - { index: 20, color: '0xa7adba' }
     - { index: 21, color: '0xdfe1e8' }
+
+font:
+  size: 14
+
+alt_send_esc: false
